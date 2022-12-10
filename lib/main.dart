@@ -8,14 +8,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meals App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Meals App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+      title: 'DeliMeals',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  MyHomePageState createState() => MyHomePageState();
+}
+
+class MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('DeliMeals'),
+      ),
+      body: const Center(
+        child: Text('Navigation Time!'),
       ),
     );
   }
